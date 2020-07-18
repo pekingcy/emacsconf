@@ -1,0 +1,16 @@
+
+;; ----- smex-history -----
+(
+ package-delete
+ cd
+ 5x5
+ arp
+ dbx
+ dig
+ erc
+)
+
+;; ----- smex-data -----
+(
+ (package-delete . 1)
+)
