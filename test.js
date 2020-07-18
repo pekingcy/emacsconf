@@ -1,6 +1,7 @@
 var myfun = function(){
-    var my = "aaaa";
-    console.log(my);  
+    console.log("hhhhh");  
 };
 
 myfun();
+
+

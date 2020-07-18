@@ -15,7 +15,6 @@
 		;; --- Auto-completion ---
 	        company
 	        popwin
-	
 		;; --- Better Editor ---
 		hungry-delete
 		swiper
@@ -23,6 +22,7 @@
 		smartparens
 		;; --- Major Mode ---
 		js2-mode
+	       
 		;; --- Minor Mode ---
 		nodejs-repl
 		exec-path-from-shell
@@ -48,6 +48,14 @@
  ;; Find Executable Path on OS X
  (when (memq window-system '(mac ns))
    (exec-path-from-shell-initialize))
+
+;;外部有修改文件自动加载
+(global-auto-revert-mode t)
+
+;;删除备份文件
+(setq make-backup-files nil)
+(setq auto-save-default nil)
+
 
 (add-to-list 'my/packages 'monokai-theme)
 (load-theme 'monokai 1)
@@ -83,5 +91,17 @@
        auto-mode-alist))
 
 (require 'nodejs-repl)
+;;定位光标位置
+(require 'popwin)
+(popwin-mode t)
+
+(setq-default abbrev-mode t)
+(define-abbrev-table 'global-abbrev-table '(
+					    ;; Shifu
+					    ("pc" "pekingcy")
+					    ;; Tudi
+					    
+					   ))
+
 ;; 文件末尾
 (provide 'init-packages)
