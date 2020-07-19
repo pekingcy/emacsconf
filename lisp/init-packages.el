@@ -51,12 +51,7 @@
 
 ;;外部有修改文件自动加载
 (global-auto-revert-mode t)
-
-;;删除备份文件
-(setq make-backup-files nil)
-(setq auto-save-default nil)
-
-
+;;添加主体
 (add-to-list 'my/packages 'monokai-theme)
 (load-theme 'monokai 1)
 
@@ -66,21 +61,13 @@
 ;;(require 'smex)
 ;;(smex-initialize)
 ;;(global-set-key (kbd "M-x") 'smex)
-
+;;wiper 
 (ivy-mode 1)
 (setq ivy-use-virtual-buffers t)
 (setq enable-recursive-minibuffers t)
-;; enable this if you want `swiper' to use it
-;; (setq search-default-mode #'char-fold-to-regexp)
-(global-set-key "\C-s" 'swiper)
-(global-set-key (kbd "C-c C-r") 'ivy-resume)
-(global-set-key (kbd "<f6>") 'ivy-resume)
-(global-set-key (kbd "M-x") 'counsel-M-x)
-(global-set-key (kbd "C-x C-f") 'counsel-find-file)
-(global-set-key (kbd "C-h f") 'counsel-describe-function)
-(global-set-key (kbd "C-h v") 'counsel-describe-variable)
 
-(require 'smartparens-config)
+;;autoload function 
+;;(require 'smartparens-config)
 ;; Always start smartparens mode in js-mode.
 ;;(add-hook 'emacs-lisp-mode-hook 'smartparens-mode)
 ;;全局使用smartparens
@@ -94,14 +81,5 @@
 ;;定位光标位置
 (require 'popwin)
 (popwin-mode t)
-
-(setq-default abbrev-mode t)
-(define-abbrev-table 'global-abbrev-table '(
-					    ;; Shifu
-					    ("pc" "pekingcy")
-					    ;; Tudi
-					    
-					   ))
-
 ;; 文件末尾
 (provide 'init-packages)
