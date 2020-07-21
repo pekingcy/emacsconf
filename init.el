@@ -5,6 +5,7 @@
 ;; installed packages.  Don't delete this line.  If you don't want it,
 ;; just comment it out by adding a semicolon to the start of the line.
 ;; You may delete these explanatory comments.
+<<<<<<< HEAD
 (package-initialize)
 
 (require 'org-install)
@@ -24,9 +25,11 @@
 (require 'init-keybindings)
 (require 'init-org)
 (require 'init-better-defaults)
+=======
+>>>>>>> 3b6480c432db9470c4ffdeeb9321084dcefc81e2
 
+(package-initialize)
 
-(setq custom-file (expand-file-name "lisp/custom.el" user-emacs-directory))
-
-(load-file custom-file)
-
+(require 'org-install)
+(require 'ob-tangle)
+(org-babel-load-file (expand-file-name "pekingcy.org" user-emacs-directory))
