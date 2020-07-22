@@ -61,7 +61,19 @@
 (with-eval-after-load 'dired
   (define-key dired-mode-map (kbd "RET") 'dired-find-alternate-file))
 ;;启用 dired-x 可以让每一次进入 Dired 模式时，使用新的快捷键 C-x C-j 就可以进 入当前文件夹的所在的路径。
+
 (require 'dired-x)
+
+
+
+;;修补函数
+(define-advice show-paren-function (:around (fn) fix-show-paren-function)
+  "Highlight enclosing parens."
+  (cond ((looking-at-p "\\s(") (funcall fn))
+	(t (save-excursion
+	     (ignore-errors (backward-up-list))
+	     (funcall fn)))))
+
 
 (provide 'init-better-defaults)
 

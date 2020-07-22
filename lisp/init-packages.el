@@ -65,13 +65,28 @@
 (ivy-mode 1)
 (setq ivy-use-virtual-buffers t)
 (setq enable-recursive-minibuffers t)
-
 ;;autoload function 
 ;;(require 'smartparens-config)
 ;; Always start smartparens mode in js-mode.
 ;;(add-hook 'emacs-lisp-mode-hook 'smartparens-mode)
 ;;全局使用smartparens
-(smartparens-global-mode t) 
+(smartparens-global-mode t)
+;;去掉","的自动匹配的问题
+;;(sp-local-pair 'emacs-lisp-mode "'" nil :actions nil)
+;;(sp-local-pair 'lisp-interaction-mode "'" nil :actions nil)
+;;上面两句功能合并
+(sp-local-pair '(emacs-lisp-mode lisp-interaction-mode) "'" nil :actions nil)
+
+;;匹配括号
+(define-advice show-paren-function (:around (fn) fix-show-paren-function)
+  "Highlight enclosing parens."
+  (cond ((looking-at-p "\\s(") (funcall fn))
+        (t (save-excursion
+             (ignore-errors (backward-up-list))
+             (funcall fn)))))
+
+
+
 (setq auto-mode-alist
       (append
        '(("\\.js\\'" . js2-mode))
