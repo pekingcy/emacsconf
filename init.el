@@ -5,28 +5,6 @@
 ;; installed packages.  Don't delete this line.  If you don't want it,
 ;; just comment it out by adding a semicolon to the start of the line.
 ;; You may delete these explanatory comments.
-<<<<<<< HEAD
-(package-initialize)
-
-(require 'org-install)
-(require 'ob-tangle)
-(org-babel-load-file (expand-file-name "pekingcy.org" user-emacs-directory))
-
-
-(add-to-list 'load-path "~/.emacs.d/lisp/")
-
-;; 快速打开配置文件
-(defun open-init-file()
-  (interactive)
-  (find-file "~/.emacs.d/init.el"))
-
-(require 'init-packages)
-(require 'init-ui)
-(require 'init-keybindings)
-(require 'init-org)
-(require 'init-better-defaults)
-=======
->>>>>>> 3b6480c432db9470c4ffdeeb9321084dcefc81e2
 
 (package-initialize)
 
