@@ -1,6 +1,18 @@
-(require 'org)
-;;语法高亮的效果
+(with-eval-after-load 'org
+  ;; Org 模式相关设定
+  ;;语法高亮的效果
 (setq org-src-fontify-natively t)
-(setq org-agenda-files '("~/org"))
+(setq org-agenda-files '("~/.emacs.d"))
+
+
+
+(setq org-capture-templates
+      '(("t" "Todo" entry (file+headline "~/.emacs.d/gtd.org" "工作安排")
+	 "* TODO [#B] %?\n  %i\n"
+	 :empty-lines 1)))
+  )
+
 (global-set-key (kbd "C-c a")'org-agenda)
+(global-set-key (kbd "C-c r") 'org-capture)
+
 (provide 'init-org)

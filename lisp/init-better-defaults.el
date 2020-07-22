@@ -75,5 +75,6 @@
 	     (funcall fn)))))
 
 
+(set-language-environment "UTF-8")
 (provide 'init-better-defaults)
 

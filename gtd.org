@@ -1,0 +1,7 @@
+* 工作安排
+
+** TODO [#B] git 保存缓存 冲突解决 合并本地代码
+   SCHEDULED: <2020-07-22 Wed 07:00>
+
+** TODO [#B] emacs org-mode learn
+
