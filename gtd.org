@@ -8,12 +8,6 @@
 
 ** TODO [#B] emacs org-mode learn
 
-
-
-
-
-
-
-
-
+** TODO [#B] day21 代码片段和检查器学习
+   SCHEDULED: <2020-07-23 Thu>
 
