@@ -28,6 +28,7 @@
 		exec-path-from-shell
 		;; --- Themes ---
 		monokai-theme
+		org-pomodoro
 		;; solarized-theme
 		) "Default packages")
 
@@ -96,5 +97,6 @@
 ;;定位光标位置
 (require 'popwin)
 (popwin-mode t)
+(require 'org-pomodoro)
 ;; 文件末尾
 (provide 'init-packages)

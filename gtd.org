@@ -1,0 +1,42 @@
+* 工作安排
+
+** TODO [#B] git 保存缓存 冲突解决 合并本地代码
+   SCHEDULED: <2020-07-22 Wed 07:00>
+   :LOGBOOK:
+   CLOCK: [2020-07-23 Thu 07:22]
+   :END:
+
+** TODO [#B] emacs org-mode learn
+
+* quick note
+
+** TODO [#C] 
+  %(pekingcy/retrieve-chrome-current-tab-url
+ 
+  [2020-07-23 Thu 08:06]
+
+** TODO [#C] 
+  %![Error: (void-function s-chop-suffix)]
+ 
+  [2020-07-23 Thu 08:08]
+
+** TODO [#C] 
+  %![Error: (void-function s-chop-suffix)]
+ 
+  [2020-07-23 Thu 08:15]
+
+** TODO [#C] 
+  %![Error: (void-function s-chop-suffix)]
+ 
+  [2020-07-23 Thu 08:18]
+
+** TODO [#C] 
+  %![Error: (void-function s-chop-suffix)]
+ 
+  [2020-07-23 Thu 08:20]
+
+** TODO [#C] 
+  %![Error: (void-function s-chop-suffix)]
+ 
+  [2020-07-23 Thu 08:24]
+
