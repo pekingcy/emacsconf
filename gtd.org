@@ -11,3 +11,6 @@
 ** TODO [#B] day21 代码片段和检查器学习
    SCHEDULED: <2020-07-23 Thu>
 
+** TODO [#B] 批量修改文件名
+   SCHEDULED: <2020-07-24 Fri 18:00>
+
