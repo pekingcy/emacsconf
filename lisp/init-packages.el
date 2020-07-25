@@ -28,6 +28,7 @@
 		exec-path-from-shell
 		;; --- Themes ---
 		monokai-theme
+		iedit
 		org-pomodoro
 		;; solarized-theme
 		) "Default packages")
@@ -98,5 +99,11 @@
 (require 'popwin)
 (popwin-mode t)
 (require 'org-pomodoro)
+
+(require 'iedit)
+
+(define-key global-map (kbd "C-c ;") 'iedit-mode)
+
+
 ;; 文件末尾
 (provide 'init-packages)

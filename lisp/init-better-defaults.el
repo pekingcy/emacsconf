@@ -20,6 +20,7 @@
 (setq ring-bell-function 'ignore)
 (fset 'yes-or-no-p 'y-or-n-p)
 
+
 ;;代码缩进
 (defun indent-buffer()
   (interactive)
