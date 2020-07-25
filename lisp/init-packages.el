@@ -30,6 +30,7 @@
 		monokai-theme
 		iedit
 		org-pomodoro
+		expand-region
 		;; solarized-theme
 		) "Default packages")
 
@@ -102,8 +103,6 @@
 
 (require 'iedit)
 
-(define-key global-map (kbd "C-c ;") 'iedit-mode)
-
-
+(require 'expand-region)
 ;; 文件末尾
 (provide 'init-packages)

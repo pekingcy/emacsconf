@@ -18,7 +18,6 @@
 	))
   )
 
-(global-set-key (kbd "C-c a")'org-agenda)
-(global-set-key (kbd "C-c r") 'org-capture)
+
 
 (provide 'init-org)
