@@ -31,6 +31,10 @@
 		iedit
 		org-pomodoro
 		expand-region
+		helm-ag
+		flycheck
+		yasnippet
+		auto-yasnippet
 		;; solarized-theme
 		) "Default packages")
 
@@ -104,5 +108,11 @@
 (require 'iedit)
 
 (require 'expand-region)
+
+(add-hook 'js2-mode-hook 'flycheck-mode)
+
+(yas-reload-all)
+(add-hook 'prog-mode-hook #'yas-minor-mode)
+
 ;; 文件末尾
 (provide 'init-packages)
