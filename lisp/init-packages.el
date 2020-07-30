@@ -35,6 +35,7 @@
 		flycheck
 		yasnippet
 		auto-yasnippet
+		evil
 		;; solarized-theme
 		) "Default packages")
 
@@ -111,8 +112,11 @@
 
 (add-hook 'js2-mode-hook 'flycheck-mode)
 
+(require 'yasnippet)
+
 (yas-reload-all)
 (add-hook 'prog-mode-hook #'yas-minor-mode)
 
+(evil-mode 1)
 ;; 文件末尾
 (provide 'init-packages)
