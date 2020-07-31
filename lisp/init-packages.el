@@ -117,6 +117,9 @@
 (yas-reload-all)
 (add-hook 'prog-mode-hook #'yas-minor-mode)
 
-(evil-mode 1)
-;; 文件末尾
+(evil-mode 1);; 文件末尾
+
+(setcdr evil-insert-state-map nil)
+(define-key evil-insert-state-map [escape] 'evil-normal-state)
+
 (provide 'init-packages)
