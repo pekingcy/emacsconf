@@ -7,10 +7,14 @@
    :END:
 
 ** TODO [#B] emacs org-mode learn
-
 ** TODO [#B] day21 代码片段和检查器学习
    SCHEDULED: <2020-07-23 Thu>
+** TODO [#B] 批量修改文件名                                        :必须完成:
+   SCHEDULED: <2020-07-30 Thu 18:00>
 
-** TODO [#B] 批量修改文件名
-   SCHEDULED: <2020-07-24 Fri 18:00>
+** TODO [#B] UIViewAlert 替换
+   SCHEDULED: <2020-07-30 Thu 13:00>
+
+** TODO [#B] package evil 学习  
+   SCHEDULED: <2020-07-30 Thu 11:00>
 

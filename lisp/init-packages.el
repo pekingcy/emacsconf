@@ -122,11 +122,10 @@
 (yas-reload-all)
 (add-hook 'prog-mode-hook #'yas-minor-mode)
 
-(evil-mode 1)
+(evil-mode 1);; 文件末尾
 
 (setcdr evil-insert-state-map nil)
 (define-key evil-insert-state-map [escape] 'evil-normal-state)
-
 (setq-default evil-want-C-u-scroll t)
 
 (global-evil-leader-mode)
@@ -148,4 +147,5 @@
 (global-evil-surround-mode)
 (window-numbering-mode 1)
 ;; 文件末尾
+
 (provide 'init-packages)
