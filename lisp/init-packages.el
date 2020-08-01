@@ -7,8 +7,8 @@
 
 ;; 注意 elpa.emacs-china.org 是 Emacs China 中文社区在国内搭建的一个 ELPA 镜像
 
- ;; cl - Common Lisp Extension
- (require 'cl)
+;; cl - Common Lisp Extension
+(require 'cl)
 
  ;; Add Packages
  (defvar my/packages '(
@@ -36,6 +36,9 @@
 		yasnippet
 		auto-yasnippet
 		evil
+		evil-leader
+		window-numbering
+		evil-surround
 		;; solarized-theme
 		) "Default packages")
 
@@ -53,7 +56,7 @@
        (when (not (package-installed-p pkg))
 	 (package-install pkg))))
 
- ;; Find Executable Path on OS X
+ ;; Find Executable Path on OS 
  (when (memq window-system '(mac ns))
    (exec-path-from-shell-initialize))
 
@@ -100,6 +103,8 @@
        '(("\\.js\\'" . js2-mode))
        auto-mode-alist))
 
+
+
 (require 'nodejs-repl)
 ;;定位光标位置
 (require 'popwin)
@@ -118,5 +123,29 @@
 (add-hook 'prog-mode-hook #'yas-minor-mode)
 
 (evil-mode 1)
+
+(setcdr evil-insert-state-map nil)
+(define-key evil-insert-state-map [escape] 'evil-normal-state)
+
+(setq-default evil-want-C-u-scroll t)
+
+(global-evil-leader-mode)
+
+(evil-leader/set-key
+  "ff" 'find-file
+  "bb" 'switch-to-buffer
+  "0"  'select-window-0
+  "1"  'select-window-1
+  "2"  'select-window-2
+  "3"  'select-window-3
+  "w/" 'split-window-right
+  "w-" 'split-window-below
+  ":"  'counsel-M-x
+  "wM" 'delete-other-windows
+  )
+
+(require 'evil-surround)
+(global-evil-surround-mode)
+(window-numbering-mode 1)
 ;; 文件末尾
 (provide 'init-packages)

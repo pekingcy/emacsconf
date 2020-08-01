@@ -8,6 +8,7 @@
  '(custom-safe-themes
    (quote
     ("6c62b1cd715d26eb5aa53843ed9a54fc2b0d7c5e0f5118d4efafa13d7715c56e" default)))
+ '(evil-want-C-u-scroll t)
  '(org-pomodoro-long-break-length 60))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
