@@ -4,7 +4,7 @@
      (package-initialize)
      (setq package-archives '(("gnu"   . "http://elpa.emacs-china.org/gnu/")
 		      ("melpa" . "http://elpa.emacs-china.org/melpa/"))))
-
+   
 ;; 注意 elpa.emacs-china.org 是 Emacs China 中文社区在国内搭建的一个 ELPA 镜像
 
 ;; cl - Common Lisp Extension
@@ -39,6 +39,7 @@
 		evil-leader
 		window-numbering
 		evil-surround
+		powerline
 		;; solarized-theme
 		) "Default packages")
 
@@ -129,10 +130,14 @@
 (setq-default evil-want-C-u-scroll t)
 
 (global-evil-leader-mode)
-
+  
 (evil-leader/set-key
   "ff" 'find-file
+  "fr" 'recentf-open-files
   "bb" 'switch-to-buffer
+  "bk" 'kill-buffer
+  "pf" 'counsel-git
+  "ps" 'helm-do-ag-project-root
   "0"  'select-window-0
   "1"  'select-window-1
   "2"  'select-window-2
@@ -142,10 +147,12 @@
   ":"  'counsel-M-x
   "wM" 'delete-other-windows
   )
-
 (require 'evil-surround)
 (global-evil-surround-mode)
 (window-numbering-mode 1)
+
+(require 'powerline)
+(powerline-default-theme)
 ;; 文件末尾
 
 (provide 'init-packages)
