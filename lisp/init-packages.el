@@ -40,6 +40,7 @@
 		window-numbering
 		evil-surround
 		powerline
+		evil-nerd-commenter
 		;; solarized-theme
 		) "Default packages")
 
