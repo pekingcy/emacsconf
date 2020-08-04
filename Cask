@@ -1,4 +1,4 @@
-(source "gnu" "http://elpa.zilongshanren.com/gnu/")
+(source "gnu" "http://mirrors.tuna.tsinghua.edu.cn/gnu/")
 (source "melpa" "http://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/")
 
 (depends-on "alert")
