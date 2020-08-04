@@ -42,6 +42,7 @@
 		powerline
 		evil-nerd-commenter
 		which-key
+                pallet	
 		;; solarized-theme
 		) "Default packages")
 
