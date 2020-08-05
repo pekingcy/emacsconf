@@ -13,7 +13,7 @@
  '(org-pomodoro-long-break-length 60)
  '(package-selected-packages
    (quote
-    (pallet goto-chg helm-core pkg-info popup undo-tree ansi package-build shut-up epl git commander f dash s company popwin hungry-delete swiper counsel smartparens js2-mode nodejs-repl exec-path-from-shell monokai-theme iedit org-pomodoro expand-region helm-ag flycheck yasnippet auto-yasnippet evil evil-leader window-numbering evil-surround powerline evil-nerd-commenter which-key))))
+    (use-package pallet goto-chg helm-core pkg-info popup undo-tree ansi package-build shut-up epl git commander f dash s company popwin hungry-delete swiper counsel smartparens js2-mode nodejs-repl exec-path-from-shell monokai-theme iedit org-pomodoro expand-region helm-ag flycheck yasnippet auto-yasnippet evil evil-leader window-numbering evil-surround powerline evil-nerd-commenter which-key))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

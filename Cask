@@ -42,6 +42,7 @@
 (depends-on "smartparens")
 (depends-on "swiper")
 (depends-on "undo-tree")
+(depends-on "use-package")
 (depends-on "which-key")
 (depends-on "window-numbering")
 (depends-on "yasnippet")
