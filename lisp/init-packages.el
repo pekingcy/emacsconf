@@ -1,15 +1,30 @@
+<<<<<<< HEAD
    ;; You may delete these explanatory comments.
     ;; (when (>= emacs-major-version 24)
     ;;      (require 'package)
     ;;       (package-initialize)
     ;;      (setq package-archives '(("gnu"   . "http://mirrors.tuna.tsinghua.edu.cn/elpa/gnu/")
     ;; 		      ("melpa" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/"))))
+=======
+(require 'cl)
+   ;;使用cask管理项目以后下边不在使用
+   ;; You may delete these explanatory comments.
+   ;; (when (>= emacs-major-version 24)
+   ;;      (require 'package)
+   ;;      (package-initialize)
+   ;;      (setq package-archives '(("gnu"   . "http://mirrors.tuna.tsinghua.edu.cn/elpa/gnu/")
+   ;; 		      ("melpa" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/"))))
+>>>>>>> 7213eaddb9cd9d35e57c73067ce366cfb94e86ee
    
 ;; 注意 elpa.emacs-china.org 是 Emacs China 中文社区在国内搭建的一个 ELPA 镜像
 
 ;; cl - Common Lisp Extension
+<<<<<<< HEAD
 (require 'cl)
 
+=======
+  
+>>>>>>> 7213eaddb9cd9d35e57c73067ce366cfb94e86ee
  ;; Add Packages
      ;; (defvar my/packages '(
      ;; 		;; --- Auto-completion ---
@@ -59,9 +74,24 @@
      ;;       (when (not (package-installed-p pkg))
      ;; 	 (package-install pkg))))
 
- ;; Find Executable Path on OS 
- (when (memq window-system '(mac ns))
-   (exec-path-from-shell-initialize))
+ ;; ;; Find Executable Path on OS 
+ ;; (when (memq window-system '(mac ns))
+ ;;   (exec-path-from-shell-initialize))
+
+(use-package exec-path-from-shell
+  :ensure t
+  :pin melpa-stable
+  :if (and (eq system-type 'darwin) (display-graphic-p))
+  :config
+  (progn
+    (when (string-match-p "/zsh$" (getenv "SHELL"))
+      ;; Use a non-interactive login shell.  A login shell, because my
+      ;; environment variables are mostly set in `.zprofile'.
+      (setq exec-path-from-shell-arguments '("-l")))
+
+    (exec-path-from-shell-initialize)
+    )
+  )
 
 ;;外部有修改文件自动加载
 (global-auto-revert-mode t)
