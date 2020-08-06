@@ -200,4 +200,10 @@
 
 (sp-local-pair 'emacs-lisp-mode "`" nil :actions nil)
 
+
+
+(add-hook 'python-mode-hook
+	  (lambda ()
+	    (set (make-local-variable 'company-backends) '(company-anaconda company-dabbrev))))
+
 (provide 'init-packages)  
