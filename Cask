@@ -1,4 +1,4 @@
-(source "gnu" "http://mirrors.tuna.tsinghua.edu.cn/gnu/")
+(source "gnu" "http://mirrors.tuna.tsinghua.edu.cn/elpa/gnu/")
 (source "melpa" "http://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/")
 
 (depends-on "alert")
@@ -42,6 +42,7 @@
 (depends-on "smartparens")
 (depends-on "swiper")
 (depends-on "undo-tree")
+(depends-on "use-package")
 (depends-on "which-key")
 (depends-on "window-numbering")
 (depends-on "yasnippet")

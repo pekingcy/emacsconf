@@ -1,63 +1,63 @@
-;; ;; You may delete these explanatory comments.
-   ;; (when (>= emacs-major-version 24)
-   ;;      (require 'package)
-   ;;      (package-initialize)
-   ;;      (setq package-archives '(("gnu"   . "http://mirrors.tuna.tsinghua.edu.cn/elpa/gnu/")
-   ;; 		      ("melpa" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/"))))
+   ;; You may delete these explanatory comments.
+    ;; (when (>= emacs-major-version 24)
+    ;;      (require 'package)
+    ;;       (package-initialize)
+    ;;      (setq package-archives '(("gnu"   . "http://mirrors.tuna.tsinghua.edu.cn/elpa/gnu/")
+    ;; 		      ("melpa" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/"))))
    
 ;; 注意 elpa.emacs-china.org 是 Emacs China 中文社区在国内搭建的一个 ELPA 镜像
 
 ;; cl - Common Lisp Extension
-  (require 'cl)
+(require 'cl)
 
  ;; Add Packages
-    ;; (defvar my/packages '(
-    ;; 		;; --- Auto-completion ---
-    ;; 	        company
-    ;; 	        popwin
-    ;; 		;; --- Better Editor ---
-    ;; 		hungry-delete
-    ;; 		swiper
-    ;; 		counsel
-    ;; 		smartparens
-    ;; 		;; --- Major Mode ---
-    ;; 		js2-mode
+     ;; (defvar my/packages '(
+     ;; 		;; --- Auto-completion ---
+     ;; 	        company
+     ;; 	        popwin
+     ;; 		;; --- Better Editor ---
+     ;; 		hungry-delete
+     ;; 		swiper
+     ;; 		counsel
+     ;; 		smartparens
+     ;; 		;; --- Major Mode ---
+     ;; 		js2-mode
 	       
-    ;; 		;; --- Minor Mode ---
-    ;; 		nodejs-repl
-    ;; 		exec-path-from-shell
-    ;; 		;; --- Themes ---
-    ;;  		monokai-theme
-    ;; 		iedit
-    ;; 		org-pomodoro
-    ;; 		expand-region
-    ;; 		helm-ag
-    ;; 		flycheck
-    ;; 		yasnippet
-    ;; 		auto-yasnippet
-    ;; 		evil
-    ;; 		evil-leader
-    ;; 		window-numbering
-    ;;  		evil-surround
-    ;; 		powerline
-    ;; 		evil-nerd-commenter
-    ;; 		which-key	
-    ;; 		;; solarized-theme
-    ;; 		) "Default packages")
+     ;; 		;; --- Minor Mode ---
+     ;; 		nodejs-repl
+     ;; 		exec-path-from-shell
+     ;; 		;; --- Themes ---
+     ;;  		monokai-theme
+     ;; 		iedit
+     ;; 		org-pomodoro
+     ;; 		expand-region
+     ;; 		helm-ag
+     ;; 		flycheck
+     ;; 		yasnippet
+     ;; 		auto-yasnippet
+     ;; 		evil
+     ;; 		evil-leader
+     ;; 		window-numbering
+     ;;  		evil-surround
+     ;; 		powerline
+     ;; 		evil-nerd-commenter
+     ;; 		which-key	
+     ;; 		;; solarized-theme
+     ;; 		) "Default packages")
 
-    ;; (setq package-selected-packages my/packages)
+     ;; (setq package-selected-packages my/packages)
 
-    ;; (defun my/packages-installed-p ()
-    ;;     (loop for pkg in my/packages
-    ;; 	   when (not (package-installed-p pkg)) do (return nil)
-    ;; 	    finally (return t)))
+     ;; (defun my/packages-installed-p ()
+     ;;     (loop for pkg in my/packages
+     ;; 	   when (not (package-installed-p pkg)) do (return nil)
+     ;; 	    finally (return t)))
 
-    ;; (unless (my/packages-installed-p)
-    ;;     (message "%s" "Refreshing package database...")
-    ;;     (package-refresh-contents)
-    ;;     (dolist (pkg my/packages)
-    ;;       (when (not (package-installed-p pkg))
-    ;; 	 (package-install pkg))))
+     ;; (unless (my/packages-installed-p)
+     ;;     (message "%s" "Refreshing package database...")
+     ;;     (package-refresh-contents)
+     ;;     (dolist (pkg my/packages)
+     ;;       (when (not (package-installed-p pkg))
+     ;; 	 (package-install pkg))))
 
  ;; Find Executable Path on OS 
  (when (memq window-system '(mac ns))
@@ -66,7 +66,7 @@
 ;;外部有修改文件自动加载
 (global-auto-revert-mode t)
 ;;添加主体
-;;(add-to-list 'my/packages 'monokai-theme)
+;; (add-to-list 'my/packages 'monokai-theme)
 (load-theme 'monokai 1)
 
 (require 'hungry-delete)
@@ -180,5 +180,7 @@
 	   ))
 (which-key-mode 1)
 (setq which-key-side-window-location 'right) 
+
+(sp-local-pair 'emacs-lisp-mode "`" nil :actions nil)
 
 (provide 'init-packages)  
