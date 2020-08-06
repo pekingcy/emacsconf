@@ -1,5 +1,7 @@
-(source "gnu" "http://mirrors.tuna.tsinghua.edu.cn/gnu/")
-(source "melpa" "http://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/")
+(source "gnu" "https://elpa.emacs-china.org/gnu/")
+(source "melpa" "https://elpa.emacs-china.org/melpa/")
+(source "melpa-stable" "https://elpa.emacs-china.org/melpa-stable/")
+
 
 (depends-on "alert")
 (depends-on "ansi")
