@@ -1,11 +1,4 @@
-<<<<<<< HEAD
-   ;; You may delete these explanatory comments.
-    ;; (when (>= emacs-major-version 24)
-    ;;      (require 'package)
-    ;;       (package-initialize)
-    ;;      (setq package-archives '(("gnu"   . "http://mirrors.tuna.tsinghua.edu.cn/elpa/gnu/")
-    ;; 		      ("melpa" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/"))))
-=======
+
 (require 'cl)
    ;;使用cask管理项目以后下边不在使用
    ;; You may delete these explanatory comments.
@@ -14,17 +7,11 @@
    ;;      (package-initialize)
    ;;      (setq package-archives '(("gnu"   . "http://mirrors.tuna.tsinghua.edu.cn/elpa/gnu/")
    ;; 		      ("melpa" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/"))))
->>>>>>> 7213eaddb9cd9d35e57c73067ce366cfb94e86ee
    
 ;; 注意 elpa.emacs-china.org 是 Emacs China 中文社区在国内搭建的一个 ELPA 镜像
 
 ;; cl - Common Lisp Extension
-<<<<<<< HEAD
-(require 'cl)
 
-=======
-  
->>>>>>> 7213eaddb9cd9d35e57c73067ce366cfb94e86ee
  ;; Add Packages
      ;; (defvar my/packages '(
      ;; 		;; --- Auto-completion ---
